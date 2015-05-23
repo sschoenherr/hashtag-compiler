@@ -1,0 +1,59 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package hashtag;
+
+/**
+ *
+ * @author stephanie
+ */
+public class Cuadruplo {
+    
+    
+    public String op;
+    public String arg1;
+    public String arg2;
+    public String resultado;
+
+    //Expresiones Aritmeticas y Booleanas
+    public Cuadruplo(String op, String arg1, String arg2, String resultado) {
+        this.op = op;
+        this.arg1 = arg1;
+        this.arg2 = arg2;
+        this.resultado = resultado;
+    }
+
+    //Asignaciones
+    public Cuadruplo(String op, String ar1, String resultado) {
+        this.op = op;
+        this.arg1 = arg1;
+        this.resultado = resultado;
+    }
+    
+    //Labels, GoTo
+    public Cuadruplo(String op, String ar1) {
+        this.op = op;
+        this.arg1 = arg1;
+      
+    }
+     
+     public String toString(){
+         
+         if(arg1 == null && arg2 == null)
+             return op + "\t\t" + resultado;
+         if (arg2 == null && resultado == null){
+             return op + "\t" + arg1;
+         }else 
+             if(arg2 == null){
+             return op + "\t" + arg1 + "\t\t" + resultado;
+            
+             } else {
+                  return op + "\t" + arg1 + "\t" + arg2 + "\t" + resultado ;
+             }
+                            
+     }
+}
+    
